@@ -1,0 +1,91 @@
+/* Normal styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Make navbar sticky */
+    top: 0;
+    width: 100%;
+    transition: top 0.3s; /* Add transition for smooth appearance */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .container {
+    text-align: center;
+    margin-top: 70px; /* Adjusted to account for the sticky navbar */
+  }
+  
+  .container h1 {
+    font-size: 36px;
+  }
+  
+  .container h2 {
+    font-size: 24px;
+  }
+  
+  .container p {
+    font-size: 18px;
+  }
+  
+  /* 3-dot menu icon for mobile */
+  #navbar-toggle {
+    display: none;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    header {
+      padding: 10px 20px;
+    }
+  
+    #navbar-toggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+    }
+  
+    nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Full width */
+      background-color: rgba(51, 51, 51, 0.9); /* Less opaque background */
+      position: fixed; /* Make navbar sticky */
+      top: 60px; /* Push down below the header */
+      left: 0;
+    }
+  
+    nav.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
